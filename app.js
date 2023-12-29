@@ -5,7 +5,7 @@ let level = 0;
 let h3 = document.querySelector("h3");
 let start = false;
 
-document.addEventListener('click',function(){
+document.addEventListener('touchstart',function(){
     if(start == false){
         console.log("key pressed");
         start = true;
@@ -72,6 +72,7 @@ function btnPress(){
 let allBtns = document.querySelectorAll(".btn");
 for(btn of allBtns){
     btn.addEventListener('click',btnPress);
+    
 }
 
 function reset(){
