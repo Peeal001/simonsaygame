@@ -5,7 +5,7 @@ let level = 0;
 let h3 = document.querySelector("h3");
 let start = false;
 
-document.addEventListener('keypress',function(){
+document.addEventListener('click',function(){
     if(start == false){
         console.log("key pressed");
         start = true;
@@ -17,6 +17,13 @@ function btnFlash(btn){
     btn.classList.add("flash");
     setTimeout(function(){
         btn.classList.remove("flash");
+    },250);
+}
+
+function userFlash(btn){
+    btn.classList.add("userflash");
+    setTimeout(function(){
+        btn.classList.remove("userflash");
     },250);
 }
 
@@ -54,7 +61,7 @@ function checkAns(idx){
 
 function btnPress(){
     let btn = this;
-    btnFlash(btn);
+    userFlash(btn);
     let userColor = btn.getAttribute("id");
     console.log(userColor);
     userSeq.push(userColor);
