@@ -1,0 +1,36 @@
+body{
+    text-align: center;
+    height: 100vh;
+    background-color: antiquewhite;
+}
+
+.boxes{
+    display: grid;
+    grid-template-columns: repeat(2,200px);
+    gap: 50px;
+    
+    border-radius: 2px solid;
+    justify-content: center;
+    
+}
+.btn{
+    height: 200px; 
+    width: 200px;
+    border-radius: 20%;
+    border: 10px solid rgb(93, 114, 95);
+}
+.yellow{
+    background-color: yellow;
+}
+.purple{
+    background-color: purple;
+}
+.blue{
+    background-color: blue;
+}
+.pink{
+    background-color: pink;
+}
+.flash{
+    background-color: white;
+}
