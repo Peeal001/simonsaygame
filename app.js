@@ -4,12 +4,17 @@ let btns = ["yellow","purple","blue","pink"];
 let level = 0;
 let h3 = document.querySelector("h3");
 let start = false;
+let startgame = document.querySelector(".startbtn");
 
-document.addEventListener('touchstart',function(){
+startgame.addEventListener('click',function(){
+
+    
     if(start == false){
         console.log("key pressed");
         start = true;
         levelUp();
+        startgame.classList.add("nonebtn");
+        
     }
 });
 
@@ -48,11 +53,12 @@ function checkAns(idx){
         }
     }
     else{
-        h3.innerHTML = `Your score was <b>${level}</b> <br> Press any key to start the game.`;
+        h3.innerHTML = `Your score was <b>${level}</b> <br> Press the circle button below to start.`;
         document.querySelector("body").style.backgroundColor = "red";
         setTimeout(function(){
             document.querySelector("body").style.backgroundColor = "white";
         },250);
+        startgame.classList.remove("nonebtn");
         reset();
 
     }
@@ -80,4 +86,5 @@ function reset(){
     userSeq = [];
     start = false;
     level = 0;
+    startgame.classList.add("startbtn");
 }

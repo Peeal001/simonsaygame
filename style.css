@@ -37,3 +37,12 @@ body{
 .userflash{
     background-color: green;
 }
+.nonebtn{
+    display: none;
+}
+.startbtn{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+
+}
